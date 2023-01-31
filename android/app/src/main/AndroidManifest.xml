@@ -1,8 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.flutter_2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
    <application
         android:label="flutter_2"
-        android:name="${applicationName}"
+        android:name=".App"
+        android:fullBackupContent="@xml/com_moengage_backup_descriptor"
+        android:dataExtractionRules="@xml/com_moengage_data_extraction_rules"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

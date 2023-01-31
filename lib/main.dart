@@ -21,6 +21,9 @@ class _MoELearnState extends State<MoELearn> {
   void initState(){
     super.initState();
     _moengagePlugin.initialise();
+
+    _moengagePlugin.enableAdIdTracking();
+    // _moengagePlugin.disableAdIdTracking();
   }
 
   @override

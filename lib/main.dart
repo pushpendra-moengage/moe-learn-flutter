@@ -1,10 +1,12 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
+import 'package:moengage_flutter/model/app_status.dart';
 import 'package:moengage_flutter/moengage_flutter.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: Text('Hello AP'),
-  ));
+  runApp(MoELearn());
 }
 
 class MoELearn extends StatefulWidget {
@@ -23,7 +25,9 @@ class _MoELearnState extends State<MoELearn> {
     _moengagePlugin.initialise();
 
     _moengagePlugin.enableAdIdTracking();
+
     // _moengagePlugin.disableAdIdTracking();
+    _moengagePlugin.setAppStatus(MoEAppStatus.install);
   }
 
   @override

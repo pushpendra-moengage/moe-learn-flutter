@@ -38,6 +38,8 @@ dependencies:
   cupertino_icons: ^1.0.2
 
   moengage_flutter: 5.2.0
+  shared_preferences: ^2.0.17
+  moengage_inbox: 4.2.0
 
 dev_dependencies:
   flutter_test:

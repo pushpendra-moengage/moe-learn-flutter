@@ -22,11 +22,14 @@ if (flutterVersionName == null) {
 }
 
 apply plugin: 'com.android.application'
+// START: FlutterFire Configuration
+apply plugin: 'com.google.gms.google-services'
+// END: FlutterFire Configuration
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion 33
     ndkVersion flutter.ndkVersion
 
     compileOptions {
@@ -77,4 +80,13 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-process:2.4.0")
 
     implementation("com.google.android.gms:play-services-ads-identifier:18.0.1")
+
+    implementation "com.google.firebase:firebase-messaging:23.1.1"
+
+    implementation("com.moengage:inapp:6.4.2")
+
+    implementation("com.moengage:inbox-core:2.2.0")
+
+
+
 }
